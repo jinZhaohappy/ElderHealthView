@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>区域老年人健康大数据分析平台</title>
+
+    <!-- <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css"> -->
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .t_title{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 80px;
+            color: #fff;
+        }
+        #chart_map{
+            cursor: pointer;
+        }
+        .t_show{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 2px;
+            background: #2C58A6;
+            padding: 2px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+    <div class="bg_header">
+        <div class="header_nav fl t_title">
+            区域老年人健康大数据分析平台
+        </div> 
+    </div>
+</div>
+
+<!--main-->
+<div class="data_content">
+    <!-- 总览数据区域 -->
+    <div class="overview_section">
+        <div class="overview_item">
+            <div class="overview_number" id="total_users">25,600</div>
+            <div class="overview_label">总用户数</div>
+        </div>
+        <div class="overview_item">
+            <div class="overview_number" id="total_regions">10</div>
+            <div class="overview_label">覆盖地区</div>
+        </div>
+        <div class="overview_item">
+            <div class="overview_number" id="high_risk_users">5,870</div>
+            <div class="overview_label">高风险用户</div>
+        </div>
+        <div class="overview_item">
+            <div class="overview_number" id="avg_risk_score">68%</div>
+            <div class="overview_label">平均风险评分</div>
+        </div>
+        <div class="overview_item">
+            <div class="overview_time" id="update_time">更新时间: 2024-01-15 14:30</div>
+        </div>
+    </div>
+
+    <div class="data_main">
+        <div class="main_left fl">
+            <div class="left_1 t_btn6" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <!-- <img src="picture/t_1.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                  各地区用户数
+                </div>
+                <div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="left_2" style="cursor: pointer;">
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <!-- <img src="picture/t_2.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                    各年龄段风险人数
+                </div>
+                <div id="chart_2" class="chart t_btn9" style="width:100%;height: 280px;"></div>
+            </div>
+        </div>
+        <div class="main_center fl">
+            <div class="center_text" style="position: relative;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                 <!--右下边框-->
+                 <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title" style="width: 230px;">
+                    <!-- <img src="picture/t_3.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                    老年人健康需关注
+                </div>
+                <div id="chart_map" style="width:100%;height:610px;">
+                </div>
+                <!-- <div class="linshi_zdy">
+                    <ul>
+                        <li><span></span>2015批(8个)</li>
+                        <li><span></span>2016批(15个)</li>
+                        <li><span></span>2017批(13个)</li>
+                        <li><span></span>2018批(11个)</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="main_right fr">
+            <div class="right_1">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title" style="width:220px;">
+                    <!-- <img src="picture/t_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                    各地区风险人数
+                </div>
+                <div id="chart_3" class="echart t_btn7" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="right_2">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title" style="width:200px;">
+                    <!-- <img src="picture/t_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"> -->
+                    风险度评分分布
+                </div>
+                <div id="chart_4" class="echart fl t_btn4" style="width:100%;height: 280px;cursor: pointer;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/index.js"></script>
+<!-- <script src="js/chart_1.js"></script> -->

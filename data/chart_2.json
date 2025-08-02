@@ -1,0 +1,20 @@
+[
+  {
+    "age_group": "60-69",
+    "low": 320,
+    "medium": 480,
+    "high": 150
+  },
+  {
+    "age_group": "70-79",
+    "low": 250,
+    "medium": 500,
+    "high": 260
+  },
+  {
+    "age_group": "80+",
+    "low": 100,
+    "medium": 240,
+    "high": 300
+  }
+]

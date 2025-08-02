@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录 - 区域老年人健康大数据分析平台</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="login-container">
+    <h2>平台登录</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="用户名" required>
+        <input type="password" id="password" placeholder="密码" required>
+        <button type="submit">登录</button>
+    </form>
+    <div id="loginMsg"></div>
+</div>
+<script>
+document.getElementById('loginForm').onsubmit = async function(e) {
+    e.preventDefault();
+    var username = document.getElementById('username').value.trim();
+    var password = document.getElementById('password').value;
+    var loginMsg = document.getElementById('loginMsg');
+    loginMsg.textContent = '';
+    try {
+        const res = await fetch('http://127.0.0.1:5000/api/auth/login', {
+            method: 'POST',
+            credentials: "include",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+        if (data.success) {
+            if (data.user.role === 'admin') {
+                window.location.href = 'index.html';
+            } else {
+                window.location.href = 'user.html';
+            }
+        } else {
+            loginMsg.textContent = data.message || '登录失败';
+        }
+    } catch (err) {
+        loginMsg.textContent = '网络错误，请稍后重试';
+    }
+};
+</script>
+</body>
+</html>

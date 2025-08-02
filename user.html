@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人健康信息中心</title>
+    <link rel="stylesheet" href="css/user.css">
+    <!-- 引入 ECharts 图表库 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+<div class="user-main">
+    <!-- 左侧区域 -->
+    <div class="user-left">
+        <!-- 个人信息 -->
+        <div class="user-info">
+            <img src="images/avatar.png" alt="头像" class="user-avatar">
+            <div class="user-name">张三</div>
+            <div class="user-meta">男 | 65岁 | 四川成都</div>
+        </div>
+        <!-- 健康风险评估 -->
+        <div class="user-risk">
+            <div class="user-risk-title">健康风险评估</div>
+            <div class="user-risk-list">
+                <div class="user-risk-item">风险分数： <span class="risk-badge">0.01</span></div>
+                <div class="user-risk-item">风险等级 <span class="risk-badge">低风险</span></div>
+
+                <!-- <div class="risk-label">风险分数: 0.01</div>
+                <div class="risk-level">风险等级：<span class="risk-badge badge-low">低</span></div> -->
+            </div>
+        </div>
+        <!-- 个性化健康建议 -->
+        <div class="user-suggest">
+            <div class="suggest-header">
+                <div class="suggest-title">个性化健康建议</div>
+                <button id="speakBtn" class="speak-btn" title="语音播报">
+                    <span class="speak-icon">🔊</span>
+                </button>
+            </div>
+            <div class="suggest-list">
+                <div class="suggest-item">减少高嘌呤食物摄入，每日饮水不少于2000ml</div>
+                <div class="suggest-item">每周进行3次30分钟以上的有氧运动</div>
+                <div class="suggest-item">建议3个月后复查骨密度和尿酸指标</div>
+            </div>
+        </div>
+        <!-- 退出登录 -->
+        <div class="user-logout">
+            <button id="logoutBtn" class="logout-btn">退出登录</button>
+        </div>
+    </div>
+    <!-- 右侧区域 -->
+    <div class="user-right">
+        <!-- 目录导航 -->
+        <div class="user-catalog">
+            <div class="catalog-item active" data-chart="radar">健康雷达图</div>
+            <div class="catalog-item" data-chart="disease">慢性病趋势预测</div>
+            <div class="catalog-item" data-chart="blood-pressure">血压趋势</div>
+            <div class="catalog-item" data-chart="blood-sugar">血糖趋势</div>
+            <div class="catalog-item" data-chart="bmi">BMI趋势</div>
+            <div class="catalog-item" data-chart="sleep">睡眠时长</div>
+            <div class="catalog-item" data-chart="heart-rate">心率变化</div>
+        </div>
+        <!-- 图表区域 -->
+        <div class="user-charts">
+            <div class="chart-card" id="chart-card-radar">
+                <div class="chart-title">个性化健康雷达图</div>
+                <div id="radarChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card" id="chart-card-disease" style="display:none;">
+                <div class="chart-title">慢性病发展趋势预测</div>
+                <div id="diseaseChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card" id="chart-card-blood-pressure" style="display:none;">
+                <div class="chart-title">血压趋势分析</div>
+                <div id="blood-pressureChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card" id="chart-card-blood-sugar" style="display:none;">
+                <div class="chart-title">血糖趋势分析</div>
+                <div id="blood-sugarChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card" id="chart-card-bmi" style="display:none;">
+                <div class="chart-title">BMI趋势分析</div>
+                <div id="bmiChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card" id="chart-card-sleep" style="display:none;">
+                <div class="chart-title">睡眠时长趋势</div>
+                <div id="sleepChart" class="chart-container"></div>
+            </div>
+            <div class="chart-card" id="chart-card-heart-rate" style="display:none;">
+                <div class="chart-title">心率变化趋势</div>
+                <div id="heart-rateChart" class="chart-container"></div>
+            </div>
+        </div>
+        <!-- 数据说明区域 -->
+        <div class="chart-desc">
+            <h3 id="desc-title">数据说明</h3>
+            <div id="desc-content">
+                <p>本页面展示了用户的健康信息，包括健康风险评估、个性化健康建议以及各项健康指标的趋势分析。</p>
+                <p>健康雷达图展示了用户在心血管、新陈代谢、肝功能等方面的综合健康状况。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/user.js"></script>
+</body>
+</html>

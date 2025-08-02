@@ -1,0 +1,10 @@
+[
+  { "region": "成都市", "score": 0.82 },
+  { "region": "绵阳市", "score": 0.74 },
+  { "region": "泸州市", "score": 0.69 },
+  { "region": "宜宾市", "score": 0.66 },
+  { "region": "南充市", "score": 0.60 },
+  { "region": "德阳市", "score": 0.58 },
+  { "region": "内江市", "score": 0.51 }
+]
+

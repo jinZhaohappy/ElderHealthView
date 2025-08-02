@@ -1,0 +1,82 @@
+[
+  {
+    "name": "成都市",
+    "value": 82,
+    "high_risk_count": 1280,
+    "hypertension_rate": 0.23,
+    "diabetes_rate": 0.17,
+    "total_users": 5600
+  },
+  {
+    "name": "绵阳市",
+    "value": 68,
+    "high_risk_count": 720,
+    "hypertension_rate": 0.19,
+    "diabetes_rate": 0.14,
+    "total_users": 3200
+  },
+  {
+    "name": "德阳市",
+    "value": 74,
+    "high_risk_count": 610,
+    "hypertension_rate": 0.21,
+    "diabetes_rate": 0.15,
+    "total_users": 2900
+  },
+  {
+    "name": "南充市",
+    "value": 76,
+    "high_risk_count": 830,
+    "hypertension_rate": 0.24,
+    "diabetes_rate": 0.18,
+    "total_users": 3100
+  },
+  {
+    "name": "宜宾市",
+    "value": 59,
+    "high_risk_count": 500,
+    "hypertension_rate": 0.18,
+    "diabetes_rate": 0.13,
+    "total_users": 2700
+  },
+  {
+    "name": "泸州市",
+    "value": 66,
+    "high_risk_count": 450,
+    "hypertension_rate": 0.22,
+    "diabetes_rate": 0.16,
+    "total_users": 2400
+  },
+  {
+    "name": "自贡市",
+    "value": 62,
+    "high_risk_count": 390,
+    "hypertension_rate": 0.20,
+    "diabetes_rate": 0.14,
+    "total_users": 2200
+  },
+  {
+    "name": "内江市",
+    "value": 58,
+    "high_risk_count": 310,
+    "hypertension_rate": 0.17,
+    "diabetes_rate": 0.12,
+    "total_users": 2100
+  },
+  {
+    "name": "乐山市",
+    "value": 64,
+    "high_risk_count": 410,
+    "hypertension_rate": 0.19,
+    "diabetes_rate": 0.13,
+    "total_users": 2300
+  },
+  {
+    "name": "攀枝花市",
+    "value": 52,
+    "high_risk_count": 280,
+    "hypertension_rate": 0.16,
+    "diabetes_rate": 0.11,
+    "total_users": 1900
+  }
+]
