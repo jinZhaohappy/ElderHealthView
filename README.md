@@ -87,7 +87,7 @@ elderHealthShow/
 - 现代浏览器（Chrome、Firefox、Safari、Edge）
 - 本地Web服务器（推荐）
 
-### 安装步骤
+### 安装步骤（没配置好，请忽略）
 
 1. **克隆项目**
    ```bash
@@ -147,16 +147,6 @@ elderHealthShow/
 1. 在 `js/` 目录下添加新的JavaScript文件
 2. 在HTML页面中引入并初始化图表
 
-## 🤝 贡献指南
-
-欢迎提交Issue和Pull Request来改进这个项目！
-
-### 贡献步骤
-1. Fork 这个项目
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
 
 ## 📝 更新日志
 
@@ -181,8 +171,5 @@ elderHealthShow/
 
 - [ECharts](https://echarts.apache.org/) - 数据可视化库
 - [jQuery](https://jquery.com/) - JavaScript库
-- 四川省地理数据提供方
+- 阿里云地理数据提供
 
----
-
-⭐ 如果这个项目对您有帮助，请给我们一个星标！
